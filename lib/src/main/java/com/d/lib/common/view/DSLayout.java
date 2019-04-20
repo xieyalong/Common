@@ -138,8 +138,8 @@ public class DSLayout extends FrameLayout {
         mLdlLoading.setVisibility(GONE);
         mLlDsl.setVisibility(VISIBLE);
         mIvIcon.setImageResource(mResIdNetError);
-        mTvDesc.setText(getResources().getString(R.string.lib_pub_net_error));
-        mButton.setText(getResources().getString(R.string.lib_pub_retry));
+        mTvDesc.setText("加载失败，请检查网络后重试");
+        mButton.setText("重试");
         mButton.setVisibility(VISIBLE);
     }
 

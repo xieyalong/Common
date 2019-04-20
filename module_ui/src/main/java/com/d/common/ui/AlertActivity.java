@@ -18,7 +18,12 @@ import com.d.lib.common.view.dialog.OperationDialog;
 import java.util.Arrays;
 
 public class AlertActivity extends Activity implements View.OnClickListener {
-
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.module_ui_activity_alert);
+        initClick();
+    }
     @Override
     public void onClick(View v) {
         int resId = v.getId();
@@ -145,12 +150,7 @@ public class AlertActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.module_ui_activity_alert);
-        initClick();
-    }
+
 
     private void initClick() {
         ViewHelper.setOnClick(this, this, R.id.iv_title_left);
